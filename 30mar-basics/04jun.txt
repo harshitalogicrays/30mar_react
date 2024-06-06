@@ -1,0 +1,142 @@
+jquery -> js library 
+AJAX - 3rd party tool 
+
+
+reactjs -> frontend javascript library for building UI. 
+1. SPA - single page application (index.html) => only 1 html file 
+2. components - (functions or class) => basic building block of code 
+components => returns html + javascript 
+reusable components
+.js or .jsx => 
+include html in javascript file 
+3. jsx - javascript and html / javascript XML /javascript syntax extension
+4. virtual DOM => copy of real DOM
+
+REAL DOM -> browser creates it 
+virtual DOM - react creates it (copy of REAl DOM)
+
+react does all the changes in virtual dom and then patch only changes in the real dom.
+
+react fiber -> diffing algo. 
+
+
+facebook developer 
+ex-  instagram website 
+
+react native -> web app 
+
+instagram -> post , stories , reels, search, like, share, comment, profile, msgs etc. 
+
+function fun(){
+    return "hello"
+}
+fun()
+
+function Fun(){
+    return <h1>Hello</h1>
+}
+<Fun></Fun> or <Fun/>
+
+class Abc{
+    return <h1>hello</h1>
+}
+<Abc></Abc>
+
+1. html - small case 
+2. components - first letter capital (pascal case)
+3. all tags are paired . <Fun></Fun> or <Fun/>
+4. class => className , for => htmlFor
+
+nodejs install -> npm (node package manager)
+ES6 features
+============================================
+library vs Framework 
+library - collection of functions 
+control is in user hand
+flexibility 
+
+Framework - collection of library
+control is in Framework hand 
+==============================================================
+github - account create 
+git install - https://www.git-scm.com/
+
+
+=========================================
+npx create-react-app appname => boilerplate code / scaffolding 
+
+
+=============================
+git and github
+create components -  class and function
+props  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
