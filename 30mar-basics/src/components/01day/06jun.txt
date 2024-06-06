@@ -1,0 +1,35 @@
+git and github - 
+git init
+git add .
+git commit -m "msg"
+remote add 
+push 
+
+add 
+commit 
+push 
+====================================================================
+create components -  class and function
+
+===================================================================
+functional components - 
+1. intro 
+2. props  - 
+
+<h1 id="" class="" name=""></h1> //html attributes
+
+<Firstfuncomp username="Happy" address="Pune" ></Firstfuncomp>
+username and address = properties (props)
+
+parent to child 
+======================
+wrapper - 
+<React.Fragment></React.Fragment>
+
+import {Fragment} from 'react'
+<Fragment></Fragment>
+
+<></> =? shorthand of React.Fragment
+=================================================================
+children props , defaultProps
+variable 
