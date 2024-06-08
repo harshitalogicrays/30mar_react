@@ -1,0 +1,50 @@
+children props = 
+<div id="" class="">
+    <h1></h1>
+    <p id=""></p>
+    <div></div>
+</div>
+
+prop-types
+
+npm i prop-types 
+
+================================
+React hooks - builtin functions 
+16.8v
+
+useState 
+useEffect
+useRef
+useContext 
+useReducer 
+useCallback
+useMemo etc. 
+custom hook 
+
+state - 
+
+=========================================================
+
+Form 
+conditional rendering 
+list rendering  - array 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
