@@ -1,0 +1,48 @@
+form - 
+1. controlled component - react manages it  - state and onChange
+2. uncontrolled component - browser DOM itself
+
+    let [num1,setNum1]=useState('')
+    let [num1,setNum1]=useState(1)    
+    let [num1,setNum1]=useState(true)
+    let [num1,setNum1]=useState([])
+    let [num1,setNum1]=useState({})
+    let [num1,setNum1]=useState([{},{},{}])
+    let [num1,setNum1]=useState(()=>{})
+
+
+conditional rendering -
+1. if else 
+2. javascript element
+3. ternary operator (?:) //condition ? true : false
+4. short circuit operator (&&) // condition && true
+
+
+inline css -
+<h1 style="color:red;background-color:yellow"></h1>
+
+<h1 style={{color:'red',backgroundColor:'yellow'}}></h1>
+
+css varibale =
+let cssvar = {color:'red',backgroundColor:'yellow'}
+
+===========================================
+
+list rendering - array 
+key props 
+
+
+array of object - [{},{},{},{}]
+====================================================
+products in card 
+css types 
+routing 
+
+form validation 
+
+
+
+
+
+
+

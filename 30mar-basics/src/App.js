@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './App.css';
 import Eventinfuncomp from './components/01day/Eventinfuncomp';
 import Firstclasscomp from './components/01day/Firstclasscomp';
@@ -7,9 +8,15 @@ import Childrenpropsdemoinfun from './components/02day/Childrenpropsdemoinfun';
 import CounterApp from './components/02day/CounterApp';
 import Form1 from './components/02day/Form1';
 import Statevariable from './components/02day/Statevariable';
+import ConditionalRendering from './components/03day/ConditionalRendering';
+import Register from './components/03day/Register';
+import Register1 from './components/03day/Register1';
+import ListRendering from './components/03day/ListRendering';
 function App() {
+  let [isLoggedIn,setIsLoggedIn]=useState(false) //state is private 
+  //we can not send it directly to the child, we can assign state value to props and can send to the children comp
   return (
-    <div>
+    <div className='container mt-5 p02'>
          <h1 className='text-danger'>Hello React</h1>
         
         {/* <Firstfuncomp/>
@@ -28,7 +35,23 @@ function App() {
 
         {/* <Statevariable/> */}
         {/* <CounterApp/> */}
-        <Form1/>
+        {/* <Form1/> */}
+
+        {/* <Register/> */}
+        {/* <Register1/> */}
+
+{/* <button
+  type="button"
+  class="btn btn-primary" 
+  onClick={()=>setIsLoggedIn(!isLoggedIn)}
+>
+  {isLoggedIn ? "Logout" :"Login"}
+</button>
+
+
+        <ConditionalRendering  loggedIn={isLoggedIn} username="Happy"/> */}
+
+        <ListRendering/>
     </div>
   );     
 }
