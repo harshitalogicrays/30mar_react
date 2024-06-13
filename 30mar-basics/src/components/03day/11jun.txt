@@ -34,11 +34,6 @@ key props
 
 array of object - [{},{},{},{}]
 ====================================================
-products in card 
-css types 
-routing 
-
-form validation 
 
 
 

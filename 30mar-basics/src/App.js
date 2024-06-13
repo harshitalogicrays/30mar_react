@@ -12,12 +12,15 @@ import ConditionalRendering from './components/03day/ConditionalRendering';
 import Register from './components/03day/Register';
 import Register1 from './components/03day/Register1';
 import ListRendering from './components/03day/ListRendering';
+import Products from './components/04day/Products';
+import MyLinks from './components/04day/MyLinks';
+import { Outlet } from 'react-router-dom';
 function App() {
   let [isLoggedIn,setIsLoggedIn]=useState(false) //state is private 
   //we can not send it directly to the child, we can assign state value to props and can send to the children comp
   return (
-    <div className='container mt-5 p02'>
-         <h1 className='text-danger'>Hello React</h1>
+    <>
+         {/* <h1 className='text-danger'>Hello React</h1> */}
         
         {/* <Firstfuncomp/>
         <Firstclasscomp></Firstclasscomp><hr/>
@@ -51,8 +54,16 @@ function App() {
 
         <ConditionalRendering  loggedIn={isLoggedIn} username="Happy"/> */}
 
-        <ListRendering/>
-    </div>
+        {/* <ListRendering/> */}
+
+        {/* <Products/> */}
+
+        <div className='row'>
+          <div className='col-3'>  <MyLinks/> </div>
+          <div className='col'>   <Outlet/>  </div>
+        </div>
+    
+    </>
   );     
 }
 
