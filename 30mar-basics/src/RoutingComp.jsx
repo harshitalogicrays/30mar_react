@@ -9,6 +9,9 @@ import Products from './components/04day/Products'
 import Register from './components/03day/Register'
 import App from './App'
 import Pagenotfound from './components/04day/Pagenotfound'
+import FormValidations from './components/05day/FormValidations'
+import ReactBootstrap from './components/05day/ReactBootstrap'
+import Reacthookform from './components/05day/Reacthookform'
 
 const RoutingComp = () => {
   //routing - / (root) - http://localhost:3000
@@ -22,6 +25,9 @@ const RoutingComp = () => {
                 <Route path='condition' element={<ConditionalRendering/>}/>
                 <Route path='products' element={<Products/>}/>
                 <Route path='form' element={<Register/>}/>
+                <Route path='form/validation' element={<FormValidations/>}/>
+                <Route path='rbdemo' element={<ReactBootstrap/>}/>
+                <Route path='form/hook' element={<Reacthookform/>}/>
             </Route>
 
 

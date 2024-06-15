@@ -1,0 +1,16 @@
+form validations - 
+
+
+react-bootstrap -  CSS component 
+<div class="container"></div>
+
+<Container></Container>
+
+===============================================================
+create own css component - npm i styled-components 
+
+================================================================
+
+react hook form - 
+lifting the state up 
+useCallback and useEffect and useRef hooks 

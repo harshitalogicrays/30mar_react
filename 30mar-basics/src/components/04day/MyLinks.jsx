@@ -11,6 +11,9 @@ const MyLinks = () => {
     <li className="nav-item"> <Link className="nav-link" to='/form'>form</Link ></li>
     <li className="nav-item"> <Link className="nav-link" to='/condition'>conditional rendering</Link ></li>
     <li className="nav-item"> <Link className="nav-link" to='/products'>Product in card</Link ></li>
+    <li className="nav-item"> <Link className="nav-link" to='/form/validation'>Form Validations</Link ></li>
+    <li className="nav-item"> <Link className="nav-link" to='/rbdemo'>React Bootstrap demo </Link ></li>
+    <li className="nav-item"> <Link className="nav-link" to='form/hook'>React Hook Form demo </Link ></li>
   </ul>
   )
 }
