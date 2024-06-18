@@ -1,0 +1,63 @@
+react hook form - 
+formik library -
+
+lifting the state up  - 
+parent --> child -> props 
+parent state ---> child ---> props 
+
+child ----> parent  (not allowed )
+
+using child we want to change the state variable of parent. 
+but we know state is private / local to that component. 
+
+Counter (parent) ---> count - 1
+
+Increaase (child) --> button -> click then count increase by 1
+
+==============================================================================
+random 8 length alphabets generate in the textbox when we load component.
+
+
+useCallback and useEffect and useRef hooks  - 
+
+
+secondary memory ---> primary memory 
+
+secondary memory ------------> primary memory 
+                  cache memory
+to increase the performance, to optimize the code  -  useCallback hook 
+
+useCallback is a React Hook that lets you cache a function definition between re-renders.
+
+=================================================================================
+uncontrolled component - ref 
+DOM manages itself.
+
+document.getElementById("txt")
+useRef hook 
+returns a current property 
+
+useState - variable , initialzation 
+returns nothing \we can use it in jsx and can display it 
+
+useRef - hold reference 
+returns current proerty
+we can not display ref in  jsx  
+
+=================================================
+useRef hook 
+useMemo hook 
+useCallback vs useMemo
+useLayoutEffect 
+useReducer
+
+
+class component - 
+props 
+event 
+state
+conditions
+list 
+form 
+ref 
+life cycle methods of class component

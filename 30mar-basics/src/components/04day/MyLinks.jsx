@@ -14,6 +14,9 @@ const MyLinks = () => {
     <li className="nav-item"> <Link className="nav-link" to='/form/validation'>Form Validations</Link ></li>
     <li className="nav-item"> <Link className="nav-link" to='/rbdemo'>React Bootstrap demo </Link ></li>
     <li className="nav-item"> <Link className="nav-link" to='form/hook'>React Hook Form demo </Link ></li>
+    <li className="nav-item"> <Link className="nav-link" to='lifting'>Lifting the state up demo </Link ></li>
+    <li className="nav-item"> <Link className="nav-link" to='usecallback'>useCallback, useEffect demo </Link ></li>
+  
   </ul>
   )
 }

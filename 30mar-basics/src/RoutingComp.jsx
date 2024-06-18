@@ -12,6 +12,8 @@ import Pagenotfound from './components/04day/Pagenotfound'
 import FormValidations from './components/05day/FormValidations'
 import ReactBootstrap from './components/05day/ReactBootstrap'
 import Reacthookform from './components/05day/Reacthookform'
+import Counter from './components/06day/Counter'
+import PasswordGenerator from './components/06day/PasswordGenerator'
 
 const RoutingComp = () => {
   //routing - / (root) - http://localhost:3000
@@ -28,6 +30,8 @@ const RoutingComp = () => {
                 <Route path='form/validation' element={<FormValidations/>}/>
                 <Route path='rbdemo' element={<ReactBootstrap/>}/>
                 <Route path='form/hook' element={<Reacthookform/>}/>
+                <Route path='lifting' element={<Counter/>}/>
+                <Route path='usecallback' element={<PasswordGenerator/>}/>
             </Route>
 
 
