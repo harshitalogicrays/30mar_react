@@ -14,7 +14,7 @@ import Register1 from './components/03day/Register1';
 import ListRendering from './components/03day/ListRendering';
 import Products from './components/04day/Products';
 import MyLinks from './components/04day/MyLinks';
-import { Outlet } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 function App() {
   let [isLoggedIn,setIsLoggedIn]=useState(false) //state is private 
   //we can not send it directly to the child, we can assign state value to props and can send to the children comp
@@ -58,10 +58,13 @@ function App() {
 
         {/* <Products/> */}
 
-        <div className='row'>
-          <div className='col-3'>  <MyLinks/> </div>
-          <div className='col'>   <Outlet/>  </div>
-        </div>
+
+        <Link to='/fun' type="button" class="btn btn-primary me-3">functional components </Link>
+        <Link to='/class' type="button" class="btn btn-danger me-3">Class components </Link>
+        <br/>
+
+        <Outlet/>
+       
     
     </>
   );     

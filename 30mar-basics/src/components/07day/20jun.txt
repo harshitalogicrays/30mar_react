@@ -1,0 +1,18 @@
+useRef hook - 
+useMemo hook - expensive calculation 
+useMemo is a React Hook that lets you cache the result of a calculation between re-renders.
+increase the performance 
+memoization
+
+useCallback - useCallback is a React Hook that lets you cache a function definition between re-renders.
+
+===============================================================================
+class component -
+
+form in class 
+ref
+pure component
+life cycle methods 
+
+============================================
+mini project 
