@@ -21,6 +21,10 @@ import ClassRounting from './components/07day/ClassRounting'
 import ClassPropsDemo from './components/07day/ClassPropsDemo'
 import EventdemoinClass from './components/07day/EventdemoinClass'
 import StateDemoinClass from './components/07day/StateDemoinClass'
+import ForminClass from './components/08day/ForminClass'
+import Refdemoinclass from './components/08day/Refdemoinclass'
+import Lifecyclemethods from './components/08day/Lifecyclemethods'
+import PureCompDemo from './components/08day/PureCompDemo'
 
 const RoutingComp = () => {
   //routing - / (root) - http://localhost:3000
@@ -48,7 +52,11 @@ const RoutingComp = () => {
                   <Route path='' element={<ClassPropsDemo username="Meera" address="Pune"/>}/>
                   <Route path='event' element={<EventdemoinClass/>}/>
                   <Route path='state' element={<StateDemoinClass/>}/>
-               </Route>
+                  <Route path='form' element={<ForminClass/>}/>
+                  <Route path='ref' element={<Refdemoinclass/>}/>
+                  <Route path='lifecycle' element={<Lifecyclemethods/>}/>
+                  <Route path='pure' element={<PureCompDemo/>}/>
+               </Route> 
             </Route>
 
 
