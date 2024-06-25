@@ -1,0 +1,32 @@
+Context provides a way to pass data through the component tree without having to pass props down manually at every level
+
+1. create context - React.createContext()
+2. Provider - <contextname.Provider value=""></contextname.Provider>
+3. consumer  -  functional -  useContext(contextname) hook 
+class - <contextname.Consumer></contextname.Consumer>
+
+
+shopping cart -
+add to cart 
+increase 
+decrease 
+remove 
+empty cart
+total 
+
+===============================================
+new react project - vite tool 
+============================================
+REST API - 
+http get 
+http post 
+http put 
+http delete 
+
+Fake API - jsonplaceholder , dummyJSON
+local json server 
+mockapi 
+
+register 
+login 
+loader 
