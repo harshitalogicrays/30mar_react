@@ -1,18 +1,33 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Image1 from '/src/assets/register.png'
+import axios from 'axios'
+import { toast } from 'react-toastify'
 
 const Register = () => {
-  let obj={username:'',email:'',password:'',cpassword:''}
+  let obj={username:'',email:'',password:'',cpassword:'',role:'1'}
     const redirect  = useNavigate()
     let [user,setUser]=useState({...obj})
     let [errors,setErrors]=useState({})
-    let handleSubmit=(e)=>{
+    let handleSubmit=async(e)=>{
         e.preventDefault();  
         let myErrors = validations()
        if(Object.keys(myErrors).length==0){
             setErrors({})
           // post data 
+          try{
+            // await fetch("http://localhost:1000/users",{
+            //     method:"POST",
+            //     headers:{'content-type':'application/json'},
+            //     body:JSON.stringify({...user,id:Date.now(),createdAt:new Date()})
+            // })
+            await axios.post("http://localhost:1000/users",{...user,createdAt:new Date()})
+            toast.success("Registered successfully")
+            redirect('/login')
+          }
+          catch(err){
+            toast.error(err)
+          }
        }
        else { e.preventDefault()
         setErrors(myErrors)} 
