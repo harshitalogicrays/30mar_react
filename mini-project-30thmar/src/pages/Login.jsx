@@ -17,8 +17,17 @@ const Login = () => {
           if(result.length==0)toast.error("Invalid credentials")
           else{
             if(result[0].password==user.password){
-              toast.success("loggedIn Successfully")
-              redirect('/')
+              if(result[0].role=='0'){
+                toast.success("loggedIn Successfully")
+                redirect('/admin')
+              }
+              else if(result[0].role=='1'){
+                toast.success("loggedIn Successfully")
+                redirect('/')
+              }  
+              
+              let obj={isLoggedIn:true,email:result[0].email,name:result[0].username,role:result[0].role}
+              sessionStorage.setItem("30marmini",JSON.stringify(obj))
             }
             else toast.error("Invalid credentials")
         } 

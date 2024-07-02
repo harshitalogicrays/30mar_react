@@ -19,7 +19,7 @@ const Register = () => {
             // await fetch("http://localhost:1000/users",{
             //     method:"POST",
             //     headers:{'content-type':'application/json'},
-            //     body:JSON.stringify({...user,id:Date.now(),createdAt:new Date()})
+            //     body:JSON.stringify({...user,createdAt:new Date()})
             // })
             await axios.post("http://localhost:1000/users",{...user,createdAt:new Date()})
             toast.success("Registered successfully")
