@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { Link, useNavigate, useParams } from 'react-router-dom'
 import { toast } from 'react-toastify'
 
 const AddProduct = () => {
@@ -7,6 +7,23 @@ const AddProduct = () => {
     let categories=['Grocery','Electronics','Jewellary','Sports','Kitchen']
     let initals={name:'',category:'',brand:'',price:'',stock:'',image:'',desc:''}
     let [product,setProduct]=useState({...initals})
+
+ //edit 
+    const {id} = useParams() //returns query parameter object
+    useEffect(()=>{
+        if(id){ getDataByid()}
+        else { setProduct({...initals})}
+    },[id])
+    let getDataByid=async()=>{
+        try{
+            let res =   await fetch(`http://localhost:1000/products/${id}`)
+            let result = await res.json()
+            setProduct(result)
+            }
+            catch(err){console.log(err)}
+    }
+
+
     let handleImage=(e)=>{
         // console.log(e.target.files[0])
         let reader = new FileReader()
@@ -19,22 +36,37 @@ const AddProduct = () => {
     let handleSubmit=async(e)=>{
         e.preventDefault()
         // alert(JSON.stringify(product))
-        try{
-            await fetch("http://localhost:1000/products",{
-                method:"POST",
-                headers:{'content-type':'application/json'},
-                body:JSON.stringify({...product,createdAt:new Date()})
-            })
-            toast.success("product added")
-            redirect('/admin/view')
+        if(!id){//add
+            try{
+                await fetch("http://localhost:1000/products",{
+                    method:"POST",
+                    headers:{'content-type':'application/json'},
+                    body:JSON.stringify({...product,createdAt:new Date()})
+                })
+                toast.success("product added")
+                redirect('/admin/view')
+            }
+            catch(err){toast.error(err)}
         }
-        catch(err){toast.error(err)}
+        else {//update
+            try{
+                await fetch(`http://localhost:1000/products/${id}`,{
+                    method:"PUT",
+                    headers:{'content-type':'application/json'},
+                    body:JSON.stringify({...product,createdAt:product.createdAt,editedAt:new Date()})
+                })
+                toast.success("product updated")
+                redirect('/admin/view')
+            }
+            catch(err){toast.error(err)}
+        }
+       
     }
   return (
     <div className='container mt-5'>
     <div class="card">
         <div class="card-header">
-            <h1>Add Product 
+            <h1>{id? "Edit ":"Add "} Product 
                 <Link type="button" class="btn btn-primary btn-lg float-end" to='/admin/view'>View Products</Link>
             </h1>
         </div>
@@ -71,11 +103,12 @@ const AddProduct = () => {
                     <label for="" class="form-label">Choose file</label>
                     <input  type="file" class="form-control" name="image" onChange={handleImage}  />
                 </div>
+                {id && <img src={product.image} height={100} width={100}/>}
                <div class="mb-3">
                 <label for="" class="form-label">Description</label>
                 <textarea class="form-control" name="desc" rows="3" value={product.desc} onChange={(e)=>setProduct({...product,desc:e.target.value})}></textarea>
                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">{id? "Update":"Submit"}</button>
                 
             </form>
         </div>

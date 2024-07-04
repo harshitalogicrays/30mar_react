@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Button, Form, InputGroup } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -7,7 +7,10 @@ import { FaArrowAltCircleLeft, FaLock, FaSearch, FaShoppingCart } from 'react-ic
 import { NavLink, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { ShowOnLogin, ShowOnLogout } from './hiddenlinks';
+import { myContext } from './ContextData';
 const Header = () => {
+const data = useContext(myContext)
+
 const redirect=useNavigate()
   let handleLogout=()=>{
     sessionStorage.removeItem("30marmini")
@@ -52,8 +55,8 @@ const redirect=useNavigate()
             </InputGroup>
           </Form>
           <Nav>
-          <Nav.Link href="#home"><FaShoppingCart size={30}/>
-            <span class="badge rounded-pill text-bg-danger">0</span >           
+          <Nav.Link as={NavLink} to='/cart'><FaShoppingCart size={30}/>
+            <span class="badge rounded-pill text-bg-danger">{data.cartItems.length}</span >           
            </Nav.Link>
            <ShowOnLogout>
               <Nav.Link as={NavLink} to='/login'   

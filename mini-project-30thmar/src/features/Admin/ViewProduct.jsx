@@ -63,7 +63,9 @@ const ViewProduct = () => {
                                 <td>{product.price}</td>
                                 <td>{product.stock}</td>
                                 <td>
-                                    <button type="button" class="btn btn-success me-2" > <FaPenAlt/> </button>
+                                    <Link type="button" class="btn btn-success me-2" 
+                                    to={`/admin/edit/${product.id}`} > <FaPenAlt/> </Link>
+                                    
                                     <button type="button" class="btn btn-danger" onClick={()=>handleDelete(product.id)} > <FaTrashAlt/> </button>
                                 </td>
                             </tr>

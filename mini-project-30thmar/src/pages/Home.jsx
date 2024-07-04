@@ -1,7 +1,11 @@
 import axios from 'axios'
-import React, { useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
+import Slider from '../features/Slider'
+import { myContext } from '../features/ContextData'
 
 const Home = () => {
+  const data = useContext(myContext)
+  console.log(data)
   // useEffect(()=>{
   //     getData()
   // },[])
@@ -56,6 +60,7 @@ const Home = () => {
 // }
   return (
     <div>
+      <Slider/>
       <h1>Home Page</h1>
     </div>
   )
