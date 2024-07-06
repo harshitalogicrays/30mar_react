@@ -19,7 +19,7 @@ const routerlinks = createBrowserRouter([
         {path:'products',element:<Products/>},
         {path:'login',element:<Login/>},
         {path:'register',element:<Register/>},
-        {path:'cart',element:<Protected><Cart/></Protected>}
+        {path:'cart',element:<Protected><Cart/></Protected>},
     ]},
     {
         path:'/admin',element:<ProtectedAdmin><AdminLayout/></ProtectedAdmin>,

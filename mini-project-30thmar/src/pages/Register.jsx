@@ -3,17 +3,20 @@ import { useNavigate } from 'react-router-dom'
 import Image1 from '/src/assets/register.png'
 import axios from 'axios'
 import { toast } from 'react-toastify'
+import Loader from '../features/Loader'
 
 const Register = () => {
   let obj={username:'',email:'',password:'',cpassword:'',role:'1'}
     const redirect  = useNavigate()
     let [user,setUser]=useState({...obj})
     let [errors,setErrors]=useState({})
+    let [isLoading,setIsLoading]=useState(false)
     let handleSubmit=async(e)=>{
         e.preventDefault();  
         let myErrors = validations()
        if(Object.keys(myErrors).length==0){
             setErrors({})
+            setIsLoading(true)
           // post data 
           try{
             // await fetch("http://localhost:1000/users",{
@@ -24,8 +27,10 @@ const Register = () => {
             await axios.post("http://localhost:1000/users",{...user,createdAt:new Date()})
             toast.success("Registered successfully")
             redirect('/login')
+            setIsLoading(false)
           }
           catch(err){
+            setIsLoading(false)
             toast.error(err)
           }
        }
@@ -45,6 +50,8 @@ const Register = () => {
         if(user.cpassword=='' || user.cpassword != user.password){formerrors.cpwderr="password not match"}
         return formerrors}
   return (
+    <>    
+    {isLoading && <Loader/>}
     <div className='container col-9 mt-5 shadow p-2'>
         <h1>Register Page</h1><hr/>
         <div className="row">
@@ -86,6 +93,7 @@ const Register = () => {
             </div>
         </div>
     </div>
+    </>
 
 
   )
